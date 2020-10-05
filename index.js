@@ -14,7 +14,7 @@ sequelize.authenticate()
         console.log("erro")
     })
 
-    
+
 //decodificar dados de formulario para utilização em js
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
@@ -25,10 +25,13 @@ app.use(express.static('public'))
 
 //setar rotas
 app.get('/', (req,res)=>{
-    pergunta.findAll({raw:true})
+    pergunta.findAll({raw:true, order:[
+        ['ID', 'DESC']
+    ]})
         .then(perguntas=>{
             res.render("index",{
                 perguntas: perguntas
+                
             })
        })   
 })

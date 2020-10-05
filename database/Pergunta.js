@@ -2,6 +2,10 @@ const Sequelize = require('sequelize')
 const connection = require('./database')
 
 const Pergunta = connection.define('pergunta',{
+    createdAt:{
+        type: Sequelize.DATEONLY,
+        allowNull: false
+    },
     titulo:{
         type: Sequelize.STRING,
         allowNull: false

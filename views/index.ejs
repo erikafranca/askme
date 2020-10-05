@@ -8,10 +8,10 @@
         <% perguntas.forEach(pergunta=>{ %>
             <div class="card">
                  <div class="card-body">
-                    <h2><strong><%= pergunta.titulo %></strong></h2>
+                    <h2><strong><%= pergunta.titulo %></strong></h2><%= pergunta.createdAt %>
                 </div>
                 <div class="card-footer">
-                    <p><%= pergunta.descricao %></p>
+                    <button class="btn btn-outline-dark">Perguntar</button>
                 </div>
             </div>
         <% }) %>
