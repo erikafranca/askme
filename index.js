@@ -14,6 +14,7 @@ sequelize.authenticate()
         console.log("erro")
     })
 
+    
 //decodificar dados de formulario para utilização em js
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
