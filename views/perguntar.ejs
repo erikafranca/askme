@@ -1,0 +1,19 @@
+<%- include ('./partials/header.ejs') %>
+
+<body>
+    <%- include ('./partials/navbar.ejs') %>
+    <div class="container col-md-6">
+        <h1>Realizar pergunta</h1>
+        <hr>
+        <form action="/salvarPergunta" method="post">
+            <label>Título</label>
+            <input type="text" name="titulo" id="titulo" placeholder="" class="form-control">
+            <label>Pegunta</label>
+            <textarea name="descricao" id="pergunta" cols="30" rows="10" placeholder= "Descreva sua pergunta" class="form-control"></textarea>
+            <br>
+            <button class="btn btn-outline-dark">Perguntar</button>
+        </form>
+    </div>
+</body>
+
+<%- include ('./partials/footer.ejs') %>
