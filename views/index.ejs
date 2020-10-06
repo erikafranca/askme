@@ -11,7 +11,7 @@
                     <h2><strong><%= pergunta.titulo %></strong></h2><%= pergunta.createdAt %>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-outline-dark">Perguntar</button>
+                    <a href="/perguntar/<%= pergunta.id%>" class="btn btn-outline-dark">Responder</a>
                 </div>
             </div>
         <% }) %>
